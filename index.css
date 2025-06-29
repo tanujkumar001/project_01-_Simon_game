@@ -1,12 +1,33 @@
 body {
     text-align: center;
+    background-image: url(gameimg.jpg);
+    background-size: cover;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .box {
     display: flex;
     justify-content: center;
 
+
 }
+
+.text {
+    color: rgb(235, 91, 208);
+    text-decoration: solid;
+}
+
+.score {
+    color: rgb(49, 219, 231);
+
+    font-weight: 800;
+
+}
+
+marquee {
+    text-decoration: underline;
+}
+
 
 .btn {
     width: 180px;

@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="simon.css">
 </head>
+
 <body>
-    <h1>Simon Game</h1>
-    <h2>Press any key to start game</h2>
+    <p class="score">
+        <marquee>Your score is count on the base of level * 2</marquee>
+    </p>
+
+    <h1 class="text">Simon Game</h1>
+    <h2 class="text">Press any key to start game</h2>
 
     <div class="box">
         <div class="line1">
@@ -20,8 +26,8 @@
             <div class="btn blue" type="button" id="blue">4</div>
         </div>
     </div>
-    <h1 class="high"></h1>
-   <p><marquee>Your score is count on the base of level * 2</marquee></p>
+    <h1 class="high text"></h1>
     <script src="simon.js"></script>
 </body>
+
 </html>
