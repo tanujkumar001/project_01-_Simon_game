@@ -29,6 +29,7 @@ function btnflash(btncol) {
 }
 
 function levelup() {
+    highest.innerText = "";
     userSeq = [];
     level++;
     h2.innerText = `Level ${level}`;
@@ -59,10 +60,16 @@ function checkAns(idx) {
 
         // highest.innerText = `Highest score is ${currScore}`;
         score(currScore);
-        document.querySelector("body").style.backgroundColor = "red";
-        setTimeout(function () {
-            document.querySelector("body").style.backgroundColor = "white";
-        }, 200);
+        document.querySelector('body').classList.add('setbg')
+        document.querySelector('body').classList.add('redalert');
+
+        setTimeout(() => {
+            document.querySelector('body').classList.remove('redalert');
+            document.querySelector('body').classList.remove('setbg')
+        }, 100);
+
+
+
         gameReset();
     }
 }
@@ -79,7 +86,7 @@ function userFlash(btn) {
     btn.classList.add('userFlash');
     setTimeout(function () {
         btn.classList.remove('userFlash')
-    }, 250);
+    }, 220);
 
 }
 
@@ -94,6 +101,7 @@ function gameReset() {
     userSeq = [];
     gameSeq = [];
     level = 0;
+
 }
 let highScore = 0;
 function score(currScore) {
@@ -102,7 +110,7 @@ function score(currScore) {
 
         highScore = currScore;
         console.log(highScore);
-        highest.innerHTML = `Congratulation !!  You crack old score . <br> Your new score is ${currScore}`
+        highest.innerHTML = `<u>Congratulation !!</u>  <br> Your new score is <b>${currScore}</b>`
     }
     else {
         highest.innerHTML = ` Your score is <b>${level}</b>`;

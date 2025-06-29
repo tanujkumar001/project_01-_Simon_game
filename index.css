@@ -1,7 +1,7 @@
 body {
     text-align: center;
-    background-image: url(gameimg.jpg);
     background-size: cover;
+    background-image: url(gameimg.jpg);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -36,10 +36,15 @@ marquee {
     border-radius: 10%;
     margin: 2rem;
     font-size: 20px;
-
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .3s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 8px 5px rgb(181, 47, 239);
 }
 
 .red {
@@ -65,4 +70,12 @@ marquee {
 .userFlash {
     background-color: black;
     color: white;
+}
+
+.setbg {
+    background-image: none;
+}
+
+.redalert {
+    background-color: red;
 }
